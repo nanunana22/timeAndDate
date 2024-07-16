@@ -24,6 +24,13 @@ public class Main {
         System.out.println("Date today: " + today);
         System.out.println("Date in two weeks: " + twoWeeks);
 
+        if (today.isAfter(twoWeeks)) {
+            System.out.println("Today is after two weeks");
+        }
+        else{
+            System.out.println("Today is not after two weeks");
+        }
+
 
     }
 }
