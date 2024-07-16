@@ -16,6 +16,9 @@ package org.example;
 //Instant zeitpunkt = Instant.now();
 
 import java.time.LocalDateTime;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -30,7 +33,15 @@ public class Main {
         else{
             System.out.println("Today is not after two weeks");
         }
+        // Zwei beliebige Daten definieren
+//        LocalDate datum1 = LocalDate.of(2023, 7, 16);
+//        LocalDate datum2 = LocalDate.of(2024, 7, 16);
 
+        // Differenz in Tagen berechnen
+        long differenzInTagen = ChronoUnit.DAYS.between(today, twoWeeks);
+
+        // Ergebnis ausgeben
+        System.out.println("Die Differenz in Tagen zwischen " + today + " und " + twoWeeks + " beträgt: " + differenzInTagen + " Tage.");
 
     }
 }
